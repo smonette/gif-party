@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GIPHY API</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+  </head>
+  <body style="background-image: url(<%= gif %>)">
+
+    <main>
+      <h1>
+        Getting Started with the GIPHY&nbsp;API
+      </h1>
+      
+      <section>
+        <h2 class="section-header">
+          1. Remix this app 🎏
+        </h2>
+        <div>
+          <a href="https://glitch.com/edit/#!/remix/giphy-starter-app">
+            <img
+                  src="https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg"
+                  alt="Remix on Glitch"
+              />
+          </a>      
+        </div>
+      </section>
+      <section>
+        <h2 class="section-header">
+           2. Create a Developer Account on GIPHY    
+        </h2>
+        <ol>    
+          <li>
+            Start by <a href="https://giphy.com/join?next=%2Foauth%2Fauthorize%2F%3Fresponse_type%3Dcode%26client_id%3DC7yftGDVCAhmaTnJCKv3eNaRsANYTDDf7PA9jZbw%26redirect_uri%3Dhttps%253A%252F%252Fdevelopers.giphy.com%252Foauth%252Fexchange%252F">creating a developer account</a> with GIPHY.
+          </li>
+          <li>
+            Next click the "Create an App" button
+          </li>
+          <li>
+            Give your app a name, and a description. 
+          </li>
+          <li>
+            Click the box labeled "I only want to use the GIPHY API"
+          </li>
+           <li>
+            Create your app!
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h2 class="section-header">
+           3. Copy the API key     
+        </h2>
+        <p>
+          Now you should see a Dashboard page with your new app.
+        </p>
+        <ol>
+          <li>Copy the red text labelled: <span class="callout">API Key</span></li>
+        </ol>
+      </section>
+      <section>
+        <h2 class="section-header">
+           4. Update your .env file
+        </h2>
+        <p>
+          Return to your Glitch project. 
+        </p>
+        <ol>
+          <li>Find a file called <span class="callout">.env</span> in your project.</li>
+          <li>Paste the API key on the line with the text: <span class="callout">GIPHY_KEY=</span></li>
+        </ol>
+      </section>
+      <section>
+        <h2 class="section-header">
+           5. Confirm that your .env is set up correctly
+        </h2>
+      <% if (!success) { %>
+        <form method="POST" action="/test" id="test">
+          <button type="submit">Did it work?</button>
+          <span class="test-alert"><%= text %></span>
+        </form>
+      <% } %>
+       <% if (success) { %>
+        <p>🎉🎉🎉 Congrats! It worked! 🎉🎉🎉</p>
+      <% } %>
+
+      </section>
+       <section>
+        <h2 class="section-header">
+           6. Build something great!
+        </h2>
+        <p>Checkout some other Glitch starter apps for inspiration on what to do next!</p>
+         <ul>
+           <li>Make a Discord bot <a href="https://starter-discord.glitch.me/">Discord Botkit Starter > </a></li>
+           <li>Build a YTMND Clone <a href="https://gif-party.glitch.me/">Gif Party ></a></li>
+           <li>Make a gif Search engine <a href="https://superhi-jiffy.glitch.me/">Jiffy Gif Search</a></li>
+         </ul>
+      </section>
+    </main>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
