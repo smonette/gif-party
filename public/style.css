@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Lato&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-repeat: repeat;
+  background-size: 15%;
+  height:100vh;
+  position:relative;
+  margin: 3rem 0;
+  padding:0;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  background-color: #eee;
+}
+/* Typography */
+h1, h2 {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 1.25px;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+a {
+  color: #6600FF;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #CC00FF;
+}
+
+main {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #ffffff;
+  padding: 10px 40px;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.callout {
+  font-family: "Courier", Monaco, monospace;
+}
+
+ol > li ,
+ul > li {
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #6600FF;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  font-size: 1rem;
+}
+.button:hover {
+  background-color: #CC00FF;
+  transition-duration: 0.4s;
+}
+
+.test-alert {
+  margin-left: 1rem;
+  display: inline-block;
+}
